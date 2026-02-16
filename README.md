@@ -23,7 +23,7 @@ Bu proje, Türkiye'nin seçili illeri için anlık hava durumu verilerini, rüzg
 ## 🚀 Kurulum ve Çalıştırma
 
 1. Bu projeyi bilgisayarınıza indirin veya klonlayın.
-2. Proje klasöründeki `index.html` dosyasını tarayıcınızda açın (VS Code **Live Server** eklentisi ile yerel ağda paylaşabilirsiniz).
+2. Proje klasöründeki `index.html` dosyasını tarayıcınızda açın (veya VS Code **Live Server** eklentisi ile yerel ağda paylaşabilirsiniz).
 3. Şehir listesinden bir il seçin ve canlı verilerin keyfini çıkarın!
 
 ## 📌 Yeni Şehir Ekleme Rehberi
