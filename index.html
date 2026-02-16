@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye Hava Durumu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glass-container">
+        <header>
+            <h1>🌦️ Türkiye Hava Durumu</h1>
+            <p>Hızlı ve Güncel Şehir Verileri</p>
+        </header>
+
+        <div class="search-area">
+            <select id="citySelect">
+                <option value="">Bir Şehir Seçiniz</option>
+                <option value="03,38.75,30.54">Afyonkarahisar</option>
+                <option value="07,36.88,30.70">Antalya</option>
+                <option value="10,39.64,27.88">Balıkesir</option>
+                <option value="11,40.14,29.97">Bilecik</option>
+                <option value="16,40.18,29.06">Bursa</option>
+                <option value="26,39.77,30.51">Eskişehir</option>
+                <option value="43,39.41,29.98">Kütahya</option>
+                <option value="45,38.61,27.42">Manisa</option>
+                <option value="48,37.21,28.36">Muğla</option>
+                <option value="64,38.67,29.41">Uşak</option>
+            </select>
+        </div>
+
+        <div id="weatherResult" class="card hidden">
+            <h2 id="cityName">Şehir İsmi</h2>
+            <div class="temp-wrapper">
+                <span id="tempValue">--</span><span class="unit">°C</span>
+            </div>
+            <div id="weatherDesc" class="description">Hava Durumu</div>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <span>💨 Rüzgar</span>
+                    <b id="windSpeed">-- km/s</b>
+                    <small id="windDir" style="display:block; font-size: 0.7rem; opacity: 0.8; margin-top:4px;">Yön: --</small>
+                </div>
+                <div class="detail-item">
+                    <span>💧 Nem</span>
+                    <b id="humidity">-- %</b>
+                </div>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 0.8rem; opacity: 0.7; text-align: left;">🕒 Günlük 24 Saatlik Akış</p>
+            <div id="hourlyTimeline" class="hourly-container">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --accent-blue: #38bdf8;
+    --text-white: #f8fafc;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-gradient);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-white);
+    padding: 20px;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+header h1 { font-weight: 700; margin-bottom: 10px; }
+header p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 30px; }
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+    margin-bottom: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.card { animation: fadeIn 0.5s ease; }
+
+.temp-wrapper {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin: 10px 0;
+}
+
+.unit { font-size: 1.5rem; color: white; vertical-align: super; }
+
+.description { font-size: 1.2rem; margin-bottom: 25px; text-transform: capitalize; }
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 16px;
+}
+
+.detail-item span { display: block; font-size: 0.8rem; opacity: 0.6; }
+
+/* Saatlik Çizelge Stilleri */
+.hourly-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 15px 5px;
+    margin-top: 10px;
+}
+
+.hourly-container::-webkit-scrollbar { height: 4px; }
+.hourly-container::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 10px; }
+
+.hourly-item {
+    min-width: 75px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.hourly-item b { display: block; color: var(--accent-blue); margin: 5px 0; font-size: 1rem; }
+
+.hidden { display: none; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
